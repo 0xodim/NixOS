@@ -8,8 +8,8 @@
 
    programs.git = {
    enable = true;
-   userName = "0xodim";       # Replace with your actual name
-   userEmail = "minhdoan342002@gmail.com";  # Replace with your actual email
+   settings.user.name = "0xodim";       # Replace with your actual name
+   settings.user.email = "minhdoan342002@gmail.com";  # Replace with your actual email
     
     };
   };
