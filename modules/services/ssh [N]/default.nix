@@ -1,0 +1,6 @@
+{ ... }: {
+	flake.modules.nixos.ssh = {
+		services.openssh.enable = true; 		
+		services.openssh.settings.PermitRootLogin = "no";
+	};
+}
