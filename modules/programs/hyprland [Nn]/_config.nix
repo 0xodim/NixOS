@@ -22,7 +22,7 @@
 
       # Environment Variables
       "env" = [
-        "XCURSOR_SIZE,24"
+        "XCURSOR_SIZE,15"
       ];
 
       # Input Devices
