@@ -35,6 +35,8 @@
       inputs.self.modules.nixos.cli-tools
       inputs.self.modules.nixos.anaconda
       inputs.self.modules.nixos.fcitx5
+      inputs.self.modules.nixos.discord
+      inputs.self.modules.nixos.spotify
 
       # Essential Host Baseline Settings
       ({ ... }: {
