@@ -27,7 +27,7 @@
       home.packages = [
         pkgs.hyprshot
         pkgs.hyprpaper
-        pkgs.arandr
+        pkgs.wdisplays
         # You can add other tools here later
     ];
   };
