@@ -4,7 +4,7 @@
   flake.modules.homeManager.mido = { ... }: {
     
     # Home Manager strictly requires a state version
-    home.stateVersion = "25.11";
+    home.stateVersion = "26.05";
 
    programs.git = {
    enable = true;

@@ -1,5 +1,5 @@
 {
-  description = "DocSteve Dendritic Pattern for NixOS 25.11";
+  description = "Dendritic Pattern for NixOS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
