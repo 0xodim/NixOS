@@ -10,6 +10,12 @@
     # Import the separated config file from the same directory
     imports = [ ./_config.nix ];
     
+    wayland.windowManager.hyprland.xwayland.enable = true;
+    home.sessionVariables = {
+      NIXOS_OZONE_WL = "1";             # Tells Electron/Chromium apps to use native Wayland
+      WLR_NO_HARDWARE_CURSORS = "1";    # Fixes invisible cursors on some GPUs (especially Nvidia)
+    };
+
     home.pointerCursor = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
