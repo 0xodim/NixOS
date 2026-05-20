@@ -15,7 +15,9 @@
         # Show sessions and users
         showSessionsByDefault=true
         showUsersByDefault=true
-        
+        showUserRealNameByDefault=false
+
+
         # Lower password font size (default is 96)
         passwordFontSize=48
         EOF
