@@ -1,7 +1,12 @@
 { ... }: {
   wayland.windowManager.hyprland.settings = {
-    
-     # Noctalia Theme
+  
+      # Xwayland
+      xwayland = {
+        force_zero_scaling = true;
+      };
+
+      # Noctalia Theme
       "source" = [
         "~/.config/hypr/noctalia/noctalia-colors.conf"
       ];
