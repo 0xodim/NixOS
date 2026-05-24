@@ -5,6 +5,7 @@
     
     # Explicitly install the packages system-wide
     environment.systemPackages = [
+      pkgs.fzf
       pkgs.tree
       pkgs.file
       pkgs.zip
