@@ -37,6 +37,7 @@
       inputs.self.modules.nixos.fcitx5
       inputs.self.modules.nixos.discord
       inputs.self.modules.nixos.spotify
+      inputs.self.modules.nixos.steam
 
       # Essential Host Baseline Settings
       ({ ... }: {
