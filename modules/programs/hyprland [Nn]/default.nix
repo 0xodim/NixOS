@@ -28,7 +28,8 @@
         pkgs.hyprshot
         pkgs.hyprpaper
         pkgs.wdisplays
-        # You can add other tools here later
+ 
+      # You can add other tools here later
     ];
   };
 
