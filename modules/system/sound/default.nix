@@ -9,6 +9,7 @@
       pkgs.alsa-utils    # Provides alsamixer for hardware toggles
       pkgs.brightnessctl # For toggling your microphone LED
     ];
+  }; # <--- ADD THIS CLOSING BRACKET AND SEMICOLON HERE
 
 
   # 2. The Main Module (NixOS context)
