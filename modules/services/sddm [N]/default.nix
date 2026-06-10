@@ -50,7 +50,6 @@
       extraPackages = [ 
         custom-sddm-theme
         pkgs.kdePackages.qt5compat
-        pkgs.adwaita-icon-theme
       ];
     };
   };

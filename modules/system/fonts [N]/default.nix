@@ -10,6 +10,7 @@
       pkgs.noto-fonts-color-emoji     
       pkgs.iosevka
       pkgs.iosevka-bin          
+      pkgs.adwaita-icon-theme
     ];
 
     # 2. Pick which fonts to use as your system defaults

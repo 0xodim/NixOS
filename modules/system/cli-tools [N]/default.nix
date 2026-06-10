@@ -5,6 +5,7 @@
     
     # Explicitly install the packages system-wide
     environment.systemPackages = [
+      pkgs.lm_sensors
       pkgs.fzf
       pkgs.tree
       pkgs.file
@@ -12,8 +13,6 @@
       pkgs.unzip
       pkgs.btop
       pkgs.wget
-      pkgs.maxfetch
-      pkgs.leaf
       pkgs.nitch
       # You can continue adding any other standard CLI tools you need here!
     ];

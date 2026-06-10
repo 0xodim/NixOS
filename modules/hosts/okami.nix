@@ -14,6 +14,7 @@
       
       inputs.self.modules.nixos.amd         
       inputs.self.modules.nixos.sddm
+      inputs.self.modules.nixos.sound
       inputs.self.modules.nixos.hyprland
       inputs.self.modules.nixos.kitty
       inputs.self.modules.nixos.rofi
@@ -38,6 +39,8 @@
       inputs.self.modules.nixos.discord
       inputs.self.modules.nixos.spotify
       inputs.self.modules.nixos.steam
+      inputs.self.modules.nixos.thinkfan
+      
 
       # Essential Host Baseline Settings
       ({ ... }: {

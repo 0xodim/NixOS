@@ -13,7 +13,13 @@
     nix.gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 3d";
+    };
+
+    # Limit the bootloader menu to the 10 most recent builds
+    boot.loader.systemd-boot = {
+      enable = true;
+      configurationLimit = 3; 
     };
 
   };

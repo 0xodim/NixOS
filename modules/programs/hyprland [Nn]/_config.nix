@@ -11,7 +11,7 @@
         "~/.config/hypr/noctalia/noctalia-colors.conf"
       ];
 
-     monitor = "eDP-1,1920x1200@90,auto,1.20"; 
+     monitor = "eDP-1,1680x1050@90,auto,1.00"; 
 
 
      # Start Noctalia when Hyprland boots
