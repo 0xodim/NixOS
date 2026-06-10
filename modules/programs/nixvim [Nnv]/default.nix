@@ -35,7 +35,7 @@
           owner = "thesimonho";
           repo = "kanagawa-paper.nvim";
           rev = "master"; 
-          hash = "sha256-UDHWREwo+cCK+lxhXhAOZ7hyRaP36TRcCucJgMRwJHU="; 
+          hash = "sha256-yzu0EvZseFlLB1Flho6WigMnuLL3inLIflxPU3LUPv0="; 
         };
       })
 

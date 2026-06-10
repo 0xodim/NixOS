@@ -40,14 +40,14 @@
       inputs.self.modules.nixos.spotify
       inputs.self.modules.nixos.steam
       inputs.self.modules.nixos.thinkfan
-      
+      inputs.self.modules.nixos.vlc      
 
       # Essential Host Baseline Settings
       ({ ... }: {
         boot.loader.systemd-boot.enable = true;
         boot.loader.efi.canTouchEfiVariables = true;
         networking.networkmanager.enable = true;
-        system.stateVersion = "26.05"; 
+        system.stateVersion = "26.11"; 
 
         # NEW: AMD GPU Hardware Quirk: Force 90Hz refresh rate system-wide
         boot.kernelParams = [ "amdgpu.dcdebugmask=0x8000" ];

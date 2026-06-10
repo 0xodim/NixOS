@@ -4,7 +4,7 @@
   flake.modules.homeManager.noctalia = { pkgs, ... }: {
     imports = [
       inputs.noctalia.homeModules.default 
-      ./_dependencies.nix 
+      ./_dependencies.nix
     ];
 
     # Declarative GTK 3/4 Theming
@@ -31,7 +31,7 @@
         evolution-data-server = pkgs.evolution-data-server;
       };
     };
-
+         
     # Install the optional recommended tools to your user environment
     # (Combined your qt6ct, cliphist, and wlsunset packages together)
     home.packages = with pkgs; [
@@ -43,6 +43,7 @@
 
   # 2. The Main Module (NixOS context)
   flake.modules.nixos.noctalia = { config, lib, pkgs, ... }: {
+ 
     # Hardware services required by Noctalia's widgets
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
