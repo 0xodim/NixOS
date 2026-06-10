@@ -15,7 +15,6 @@
 
       oh-my-zsh = {
         enable = true;
-        # Add the specific plugins you want to use here:
         plugins = [ "git" "sudo" "docker" "history" ]; 
         theme = "nicoulaj"; 
       };
@@ -24,12 +23,16 @@
 
   # 2. The Main Module (NixOS context)
   flake.modules.nixos.zsh = { pkgs, inputs, ... }: {
-    
-    # Enable Zsh system-wide so it can be set as a default shell
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
+    home-manager.sharedModules = [ inputs.self.modules.homeManager.zsh ];
+  };
 
-    # Automatically inject the Home Manager settings
+  # 3. The Darwin Module (macOS context)
+  flake.modules.darwin.zsh = { pkgs, inputs, ... }: {
+    # Required for nix-darwin to hook into your Mac's default shell
+    programs.zsh.enable = true;
+    # Automatically inject your Home Manager settings into the Mac!
     home-manager.sharedModules = [ inputs.self.modules.homeManager.zsh ];
   };
 }

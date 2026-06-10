@@ -24,4 +24,10 @@
     # Inject the Home Manager settings into your system
     home-manager.sharedModules = [ inputs.self.modules.homeManager.kitty ];
   };
+
+    # The Darwin Module (macOS context)
+  flake.modules.darwin.kitty = { ... }: {
+    # Inject the exact same Home Manager settings into your Mac!
+    home-manager.sharedModules = [ inputs.self.modules.homeManager.kitty ];
+  };
 }
