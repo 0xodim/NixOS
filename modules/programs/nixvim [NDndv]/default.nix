@@ -77,4 +77,11 @@
     # Automatically inject the Home Manager settings system-wide
     home-manager.sharedModules = [ inputs.self.modules.homeManager.nixvim-config ];
   };
+
+  # 4. The Darwin Context (macOS context)
+  flake.modules.darwin.nixvim-config = { ... }: {
+    # Inject the exact same Home Manager settings into your Mac!
+    home-manager.sharedModules = [ inputs.self.modules.homeManager.nixvim-config ];
+  };
+
 }
