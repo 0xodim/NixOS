@@ -41,7 +41,7 @@
       inputs.self.modules.nixos.steam
       inputs.self.modules.nixos.thinkfan
       inputs.self.modules.nixos.vlc      
-
+      inputs.self.modules.nixos.opencode
       # Essential Host Baseline Settings
       ({ ... }: {
         boot.loader.systemd-boot.enable = true;
