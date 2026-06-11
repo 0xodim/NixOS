@@ -11,7 +11,8 @@
       inputs.self.modules.darwin.nixvim-config
       inputs.self.modules.darwin.zsh
       inputs.self.modules.darwin.brave-browser
-      inputs.self.modules.darwin.amethyst      
+      inputs.self.modules.darwin.amethyst 
+      inputs.self.modules.darwin.davinci     
 
     ];
 

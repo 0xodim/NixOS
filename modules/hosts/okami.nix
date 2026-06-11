@@ -42,6 +42,10 @@
       inputs.self.modules.nixos.thinkfan
       inputs.self.modules.nixos.vlc      
       inputs.self.modules.nixos.opencode
+      inputs.self.modules.nixos.sublime-text
+      inputs.self.modules.nixos.libreoffice
+      inputs.self.modules.nixos.nasm
+
       # Essential Host Baseline Settings
       ({ ... }: {
         boot.loader.systemd-boot.enable = true;
