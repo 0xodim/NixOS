@@ -25,7 +25,7 @@
 
       # Dynamic Gaps: Apply a larger outer gap when exactly 1 tiled window is visible
       workspace = [
-        "w[tv1], gapsout:150"
+        "w[tv1], gapsout:120"
       ];
 
       # Environment Variables
@@ -77,19 +77,13 @@
 
       # Keybindings
       "bind" = [
-        "$mainMod, t, exec, $terminal"
-        "$mainMod, q, killactive,"
-        "$mainMod, Space, togglefloating,"       
-      "$mainMod, f, exec, noctalia-shell ipc call launcher toggle"
-      "$mainMod, Delete, exec, noctalia-shell ipc call controlCenter toggle"
-      "$mainMod SHIFT, b, exec, noctalia-shell ipc call bar toggle" 
-      "$mainMod SHIFT, Delete, exec, noctalia-shell ipc call lockScreen lock "           
-      ", XF86MonBrightnessUp, exec, noctalia-shell ipc call brightness increase"
-      ", XF86MonBrightnessDown, exec, noctalia-shell ipc call brightness decrease"
-      ", XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
-      ", XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
-      ", XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
-      ", XF86AudioMicMute, exec, noctalia-shell ipc call volume muteInput"
+         "$mainMod, t, exec, $terminal"
+        "$mainMod, q, killactive"
+        "$mainMod, Space, togglefloating"       
+        "$mainMod, f, exec, noctalia-shell ipc call launcher toggle"
+        "$mainMod, Delete, exec, noctalia-shell ipc call controlCenter toggle"
+        "$mainMod SHIFT, b, exec, noctalia-shell ipc call bar toggle" 
+        "$mainMod SHIFT, Delete, exec, noctalia-shell ipc call lockScreen lock"           
 
       # Move focus 
         "$mainMod, l, movefocus, l"
@@ -132,6 +126,22 @@
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+      ];
+
+      # 'bindel' applies the 'e' (repeating) and 'l' (locked) flags [2]
+      # This allows you to hold down the key to adjust settings, even on the lock screen.
+      "bindel" = [
+        ", XF86MonBrightnessUp, exec, noctalia-shell ipc call brightness increase"
+        ", XF86MonBrightnessDown, exec, noctalia-shell ipc call brightness decrease"
+        ", XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
+        ", XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
+      ];
+
+      # 'bindl' applies the 'l' (locked) flag for toggles [2]
+      # This allows mute toggles to work on the lock screen without repeating.
+      "bindl" = [
+        ", XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
+        ", XF86AudioMicMute, exec, noctalia-shell ipc call volume muteInput"
       ];
         
       # Move/resize windows with mainMod + LMB/RMB and dragging

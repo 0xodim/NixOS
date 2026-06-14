@@ -23,6 +23,7 @@
       platformTheme.name = "qtct";
     };
 
+
     programs.noctalia-shell = {
       enable = true;
       # Override the package to inject Python and Evolution Data Server for calendar support
@@ -31,13 +32,14 @@
         evolution-data-server = pkgs.evolution-data-server;
       };
     };
-         
+
     # Install the optional recommended tools to your user environment
     # (Combined your qt6ct, cliphist, and wlsunset packages together)
     home.packages = with pkgs; [
       qt6Packages.qt6ct
       cliphist
       wlsunset
+      gnome-calendar
     ];
   };
 
