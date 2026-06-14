@@ -33,8 +33,6 @@
     ];
   };
 
-   
-
   # The Main Module (NixOS context)
   flake.modules.nixos.hyprland = { config, lib, pkgs, ... }: {
     programs.hyprland.enable = true;

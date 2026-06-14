@@ -39,19 +39,31 @@
       qt6Packages.qt6ct
       cliphist
       wlsunset
-      gnome-calendar
     ];
   };
 
   # 2. The Main Module (NixOS context)
   flake.modules.nixos.noctalia = { config, lib, pkgs, ... }: {
  
+    # Put the timezone and portal settings here!
+    time.timeZone = "Asia/Ho_Chi_Minh"; # Change this to your actual timezone
+
+    # 1. Enable dconf so GNOME apps can read their settings!
+    programs.dconf.enable = true;
+
+    # Enable XDG Portals properly so gnome-calendar doesn't crash!
+    xdg.portal = {
+      enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+      ];
+      config.common.default = "*"; 
+    };
+
     # Hardware services required by Noctalia's widgets
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
-    
-    # Enable the calendar event service
-    services.gnome.evolution-data-server.enable = true;
 
     # Install optional system-level dependencies (like ddcutil and screen sharing portals)
     environment.systemPackages = [
