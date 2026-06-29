@@ -1,10 +1,10 @@
 { inputs, ... }: {
   
   # 1. The Auxiliary Module (Home Manager context)
-  flake.modules.homeManager.mido = { ... }: {
+  flake.modules.homeManager.midori = { ... }: {
     
     # Home Manager strictly requires a state version
-    home.stateVersion = "26.05";
+    home.stateVersion = "26.11";
 
    programs.git = {
    enable = true;
@@ -15,21 +15,20 @@
   };
 
   # 2. The Main Module (NixOS context)
-  flake.modules.nixos.mido = { config, lib, pkgs, ... }: {
+  flake.modules.nixos.midori = { config, lib, pkgs, ... }: {
     
     home-manager.backupFileExtension = "backup";
     # Define the system user account
-    users.users.mido = {
+    users.users.midori = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
       initialPassword = "Nhatminh34"; # Change this after your first login!
     
     };
 
-    # Activate Home Manager for 'mido' and inject their personal HM auxiliary module
-    home-manager.users.mido = {
-      imports = [ inputs.self.modules.homeManager.mido ];
+    # Activate Home Manager for 'midori' and inject their personal HM auxiliary module
+    home-manager.users.midori = {
+      imports = [ inputs.self.modules.homeManager.midori ];
     };
   };
 }
-
