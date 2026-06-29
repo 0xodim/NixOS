@@ -6,6 +6,9 @@
     modules = [
       # Import the hidden hardware config
       ./_hardware-configuration.nix
+
+      { networking.hostName = "okami"; } 
+      { environment.sessionVariables.NIXOS_OZONE_WL = "1"; }
       
       # IMPORT THE CORE HOME MANAGER MODULE HERE:
       inputs.home-manager.nixosModules.home-manager
