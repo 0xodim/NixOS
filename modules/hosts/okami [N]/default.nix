@@ -11,7 +11,6 @@
       inputs.home-manager.nixosModules.home-manager
       
       # Pull your features from your Dendritic library!
-      
       inputs.self.modules.nixos.amd         
       inputs.self.modules.nixos.sddm
       inputs.self.modules.nixos.sound
@@ -45,6 +44,9 @@
       inputs.self.modules.nixos.sublime-text
       inputs.self.modules.nixos.libreoffice
       inputs.self.modules.nixos.nasm
+      inputs.self.modules.nixos.cybersecurity
+      inputs.self.modules.nixos.homelab
+
 
       # Essential Host Baseline Settings
       ({ ... }: {
@@ -55,7 +57,6 @@
 
         # NEW: AMD GPU Hardware Quirk: Force 90Hz refresh rate system-wide
         boot.kernelParams = [ "amdgpu.dcdebugmask=0x8000" ];
-
       })
     ];
   };

@@ -11,6 +11,7 @@
     pkgs.xdg-utils
     pkgs.jq
     pkgs.wf-recorder
+    pkgs.slurp
 
   # USB PLUGINS
     pkgs.udisks2       
