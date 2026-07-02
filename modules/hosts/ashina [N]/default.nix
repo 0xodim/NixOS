@@ -15,16 +15,10 @@
       inputs.self.modules.nixos.sddm
       inputs.self.modules.nixos.virtualization
       inputs.self.modules.nixos.malware-lab
-      inputs.self.modules.nixos.intel
-      inputs.self.modules.nixos.nvidia
+      inputs.self.modules.nixos.w541
       inputs.self.modules.nixos.kitty
       inputs.self.modules.nixos.zsh
       inputs.self.modules.nixos.midori
-
-
-
-
-
       
       # Additional utilities
       inputs.self.modules.nixos.nixvim-config

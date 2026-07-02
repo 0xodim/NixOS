@@ -14,7 +14,7 @@
       inputs.home-manager.nixosModules.home-manager
       
       # Pull your features from your Dendritic library!
-      inputs.self.modules.nixos.amd         
+      inputs.self.modules.nixos.t14s
       inputs.self.modules.nixos.sddm
       inputs.self.modules.nixos.sound
       inputs.self.modules.nixos.hyprland
@@ -25,7 +25,6 @@
       inputs.self.modules.nixos.nix
       inputs.self.modules.nixos.mido 
       inputs.self.modules.nixos.noctalia
-      inputs.self.modules.nixos.alsa    
       inputs.self.modules.nixos.optimization
       inputs.self.modules.nixos.bluetooth
       inputs.self.modules.nixos.nixvim-config 
@@ -41,7 +40,6 @@
       inputs.self.modules.nixos.discord
       inputs.self.modules.nixos.spotify
       inputs.self.modules.nixos.steam
-      inputs.self.modules.nixos.thinkfan
       inputs.self.modules.nixos.vlc      
       inputs.self.modules.nixos.opencode
       inputs.self.modules.nixos.sublime-text
