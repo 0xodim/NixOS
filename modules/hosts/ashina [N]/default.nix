@@ -22,11 +22,16 @@
       
       # Additional utilities
       inputs.self.modules.nixos.nixvim-config
-      inputs.self.modules.nixos.networkmanager
       inputs.self.modules.nixos.chromium
 
+      ({ ... }: {
+        boot.loader.systemd-boot.enable = true;
+        boot.loader.efi.canTouchEfiVariables = true;
+        networking.networkmanager.enable = true;
+        system.stateVersion = "26.11"; 
+      })
 
-      { system.stateVersion = "26.11"; }
+
     ];
   };
 }
