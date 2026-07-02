@@ -3,7 +3,6 @@
   # The Main Module (NixOS context)
   flake.modules.nixos.fonts = { pkgs, ... }: {
     
-    # 1. Install the font packages globally
     fonts.packages = [
       pkgs.noto-fonts
       pkgs.noto-fonts-cjk-sans  
@@ -11,13 +10,15 @@
       pkgs.iosevka
       pkgs.iosevka-bin          
       pkgs.adwaita-icon-theme
+      
+      pkgs.nerd-fonts.meslo-lg
     ];
 
-    # 2. Pick which fonts to use as your system defaults
     fonts.fontconfig.defaultFonts = {
       serif = [ "Iosevka Etoile" ];    
       sansSerif = [ "Iosevka Aile" ]; 
-      monospace = [ "Iosevka" ]; 
+      
+      monospace = [ "MesloLGS Nerd Font Mono" "Iosevka" ]; 
       emoji = [ "Noto Color Emoji" ];
     };
   };

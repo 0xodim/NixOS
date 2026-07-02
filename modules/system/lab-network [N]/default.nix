@@ -9,6 +9,9 @@
         prefixLength = 24;
       }];
       
+      # Firewall
+      firewall.interfaces."labnet0".allowedUDPPorts = [ 53 67 ];
+      
       # NAT from labnet0 -> wlp2s0
       nat = {
         enable = true;

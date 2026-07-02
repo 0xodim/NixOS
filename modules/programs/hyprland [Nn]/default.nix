@@ -28,6 +28,9 @@
         pkgs.hyprshot
         pkgs.hyprpaper
         pkgs.wdisplays
+        pkgs.nwg-look
+        pkgs.qtengine
+
  
       # You can add other tools here later
     ];

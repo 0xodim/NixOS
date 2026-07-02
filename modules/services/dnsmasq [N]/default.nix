@@ -5,6 +5,7 @@
       settings = {
         interface = "labnet0";
         dhcp-range = "10.100.0.50,10.100.0.200,12h";
+        bind-interfaces = true;
         
         # Forward *.lab.local queries -> DC01 
         server = [ "/lab.local/10.100.0.20" "192.168.1.1" ];

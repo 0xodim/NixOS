@@ -12,6 +12,7 @@
       pkgs.btop
       pkgs.wget
       pkgs.nitch
+      pkgs.unrar
     ];
   };
 
