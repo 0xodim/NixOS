@@ -4,7 +4,7 @@
   flake.modules.homeManager.midori = { ... }: {
     
     # Home Manager strictly requires a state version
-    home.stateVersion = "26.11";
+    home.stateVersion = "26.05";
 
    programs.git = {
    enable = true;
@@ -22,7 +22,7 @@
     users.users.midori = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
-      initialPassword = "Nhatminh34"; # Change this after your first login!
+      initialPassword = "1"; # Change this after your first login!
     
     };
 

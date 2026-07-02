@@ -22,11 +22,6 @@
         "~/.config/hypr/noctalia/noctalia-colors.conf"
       ];
 
-      # Dynamic Gaps: Apply a larger outer gap when exactly 1 tiled window is visible
-      workspace = [
-        "w[tv1], gapsout:120"
-      ];
-
       # Environment Variables
       "env" = [
         "XCURSOR_SIZE,15"
