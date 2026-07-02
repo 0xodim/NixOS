@@ -7,6 +7,9 @@
       inputs.home-manager.nixosModules.home-manager
       { networking.hostName = "ashina"; }
       { environment.sessionVariables.NIXOS_OZONE_WL = "1"; }
+      { nixpkgs.config.allowUnfree = true; }
+    
+
       
       # Core Host Features
       inputs.self.modules.nixos.nix
