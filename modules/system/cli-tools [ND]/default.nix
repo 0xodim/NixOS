@@ -13,6 +13,7 @@
       pkgs.wget
       pkgs.nitch
       pkgs.unrar
+      pkgs.fastfetch
     ];
   };
 
