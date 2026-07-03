@@ -45,10 +45,12 @@
       inputs.self.modules.nixos.cybersecurity
       inputs.self.modules.nixos.homelab
       inputs.self.modules.nixos.programming
+      inputs.self.modules.nixos.sunshine
+
 
       # Essential Host Baseline Settings
       ({ ... }: {
-  
+        time.timeZone = "Asia/Ho_Chi_Minh";
         boot.loader.systemd-boot.enable = true;
         boot.loader.efi.canTouchEfiVariables = true;
         networking.networkmanager.enable = true;

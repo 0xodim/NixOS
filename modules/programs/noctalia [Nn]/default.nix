@@ -1,6 +1,6 @@
 { inputs, ... }: {
   
-  # 1. The Auxiliary Module (Home Manager context)
+  # The Auxiliary Module (Home Manager context)
   flake.modules.homeManager.noctalia = { pkgs, ... }: {
     imports = [
       inputs.noctalia.homeModules.default 
@@ -42,13 +42,10 @@
     ];
   };
 
-  # 2. The Main Module (NixOS context)
+  # The Main Module (NixOS context)
   flake.modules.nixos.noctalia = { config, lib, pkgs, ... }: {
- 
-    # Put the timezone and portal settings here!
-    time.timeZone = "Asia/Ho_Chi_Minh"; # Change this to your actual timezone
 
-    # 1. Enable dconf so GNOME apps can read their settings!
+    # Enable dconf so GNOME apps can read their settings!
     programs.dconf.enable = true;
 
     # Enable XDG Portals properly so gnome-calendar doesn't crash!
@@ -64,6 +61,11 @@
     # Hardware services required by Noctalia's widgets
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
+    services.tlp.enable = false;
+    services.auto-cpufreq.enable = false;
+    powerManagement.cpuFreqGovernor = lib.mkForce null;
+    boot.kernelParams = [ "amd_pstate=active" ];
+
 
     # Install optional system-level dependencies (like ddcutil and screen sharing portals)
     environment.systemPackages = [
