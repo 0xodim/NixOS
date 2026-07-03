@@ -2,7 +2,7 @@
   flake.nixosConfigurations.okami = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = { inherit inputs; };
-    
+
     modules = [
       # Import the hidden hardware config
       ./_hardware-configuration.nix
@@ -30,34 +30,32 @@
       inputs.self.modules.nixos.nixvim-config 
       inputs.self.modules.nixos.zsh
       inputs.self.modules.nixos.vpn
-      inputs.self.modules.nixos.antigravity
       inputs.self.modules.nixos.obsidian    
       inputs.self.modules.nixos.fonts        
       inputs.self.modules.nixos.pcmanfm
       inputs.self.modules.nixos.cli-tools
-      inputs.self.modules.nixos.anaconda
       inputs.self.modules.nixos.fcitx5
       inputs.self.modules.nixos.discord
       inputs.self.modules.nixos.spotify
       inputs.self.modules.nixos.steam
+      inputs.self.modules.nixos.qbittorrent
       inputs.self.modules.nixos.vlc      
-      inputs.self.modules.nixos.opencode
       inputs.self.modules.nixos.sublime-text
       inputs.self.modules.nixos.libreoffice
-      inputs.self.modules.nixos.nasm
       inputs.self.modules.nixos.cybersecurity
       inputs.self.modules.nixos.homelab
-
+      inputs.self.modules.nixos.programming
 
       # Essential Host Baseline Settings
       ({ ... }: {
+  
         boot.loader.systemd-boot.enable = true;
         boot.loader.efi.canTouchEfiVariables = true;
         networking.networkmanager.enable = true;
         system.stateVersion = "26.11"; 
-
-        # NEW: AMD GPU Hardware Quirk: Force 90Hz refresh rate system-wide
         boot.kernelParams = [ "amdgpu.dcdebugmask=0x8000" ];
+        nixpkgs.config.allowUnfree = true; 
+  
       })
     ];
   };
