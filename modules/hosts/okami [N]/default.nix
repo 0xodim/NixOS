@@ -46,6 +46,7 @@
       inputs.self.modules.nixos.homelab
       inputs.self.modules.nixos.programming
       inputs.self.modules.nixos.sunshine
+      inputs.self.modules.nixos.logitech
 
 
       # Essential Host Baseline Settings

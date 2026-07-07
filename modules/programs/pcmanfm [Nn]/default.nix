@@ -12,7 +12,8 @@
     
     # Enable GVfs, a system-level service required for file managers 
     # to support trash, mounting, and external volumes natively.
-    services.gvfs.enable = true; 
+    services.gvfs.enable = true;
+    services.udisks2.enable = true;
 
     # Automatically inject the auxiliary Home Manager module into the host system
     home-manager.sharedModules = [ inputs.self.modules.homeManager.pcmanfm ];

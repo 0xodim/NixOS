@@ -43,7 +43,7 @@
         "touchpad" = {
           "natural_scroll" = "false";
         };
-        "sensitivity" = "0"; # -1.0 - 1.0, 0 means no modification.
+        "sensitivity" = "1.0"; # -1.0 - 1.0, 0 means no modification.
       };
 
       # General Window Layout
@@ -155,6 +155,7 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
+      
     };
   };
 }
